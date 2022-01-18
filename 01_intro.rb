@@ -47,6 +47,7 @@ while continue == true
 
     
     developers << {name: name, age: age.to_i, skills: skills_array, friends: friends}    
+    puts developers
     puts "Do you want to add another developer? (y/n)"
     continue_response = gets.strip
     if continue_response == 'n' || continue_response == 'N'
@@ -55,5 +56,5 @@ while continue == true
 end
 
 developers.each do |developer|
-    puts "#{developer[:name]} is a developer of #{developer[:age]} years old with #{developer[:friends].count} friends and is able to #{developer[:friends]}"
+    puts "#{developer[:name]} is a developer of #{developer[:age]} years old with #{developer[:friends].count} friends and is able to #{developer[:skills].join(', ')}"
 end
